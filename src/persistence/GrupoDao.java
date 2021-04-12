@@ -16,23 +16,22 @@ public class GrupoDao {
 	private Connection c;
 
 	public GrupoDao() throws ClassNotFoundException, SQLException {
-		
 		GenericDao gDao = new GenericDao();
 		c = gDao.getConnection();
-		System.out.println("Feita a conexao com o banco de dados");
-		
 	}
 	
-	public List<Grupo> procGerarGrupos() throws SQLException {
-		
-		String g = "";
+	public void procGerarGrupos() throws SQLException {
 		
 		String sql = "{CALL sp_insereTimesGrupo}";
 		CallableStatement cs = c.prepareCall(sql);
 		cs.execute();
-		System.out.println("Query executada");
+		cs.close();
 		
+	}
+	
+	public List<Grupo> mostrarGrupos() throws ClassNotFoundException, SQLException {
 		
+		String g = "";
 		String sqlSelectGrupos = "SELECT * FROM v_grupos";
 		PreparedStatement ps = c.prepareStatement(sqlSelectGrupos);
 		
@@ -57,11 +56,8 @@ public class GrupoDao {
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			System.out.println("Erro na GrupoDao");
 		}
-		
-		cs.close();
-		
+		ps.close();
 		return grupos;
 	}
 }

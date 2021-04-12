@@ -11,12 +11,8 @@
 	<form action="/campeonato-paulista/grupos" method="get">
 		<div align="center">
 			<h3>Clique aqui para gerar os grupos</h3>
-			<a href="/campeonato-paulista/grupos">
-				<button type="submit" class="btnGerarGrupos">Gerar grupos</button>
-			</a>
-			<a href="/campeonato-paulista/grupos">
-				<button type="submit" class="btnMostrarGrupos">Mostrar grupos</button>
-			</a>
+				<button type="submit" name="action" value="gerar" class="btnGerarGrupos">Gerar grupos</button>
+				<button type="submit" name="action" value="mostrar" class="btnMostrarGrupos">Mostrar grupos</button>
 		</div>
 	</form>
 	
