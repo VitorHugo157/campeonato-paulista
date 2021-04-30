@@ -1,5 +1,5 @@
 # campeonato-paulista
-Projeto referente a avaliação 1 da disciplina de Laboratório de Banco de Dados
+Sistema web desenvolvido para a disciplina de Laboratório de Banco de Dados
 
 <strong>INTEGRANTES DO GRUPO</strong>
 
