@@ -23,7 +23,7 @@
 			</thead>
 			<tbody>
 				<c:forEach items="${jogos}" var="jogo">
-					<form action="/campeonato-paulista2/pesquisaJogos" method="post">
+					<form action="/campeonato-paulista/pesquisaJogos" method="post">
 						<input type="hidden" name="nomeTimeA" value="${jogo.codigoTimeA}">
 						<input type="hidden" name="nomeTimeB" value="${jogo.codigoTimeB}">
 						<input type="hidden" name="dataJogo" value="${jogo.data}">

@@ -53,6 +53,8 @@ table {
   box-shadow: 1px 1px 20px #c9c9c9;
   text-align: center;
   border-collapse: collapse;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
 }
 
 h1,
@@ -80,7 +82,7 @@ tr,
 td {
   color: rgb(87, 87, 87);
   font-weight: 500;
-  padding: 4px;
+  padding: 5px;
 }
 
 .tdAcoes {
