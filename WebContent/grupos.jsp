@@ -12,7 +12,7 @@
 <body>
 	<div align="center">
 		<div id="grupoA">
-			<h2>Grupo A</h2>
+			<h3>Grupo A</h3>
 			<table>
 				<thead>
 					<tr>
@@ -32,9 +32,10 @@
 				</tbody>
 			</table>
 		</div>
+		<br>
 		
 		<div id="grupoB">
-			<h2>Grupo B</h2>
+			<h3>Grupo B</h3>
 			<table>
 				<thead>
 					<tr>
@@ -54,9 +55,10 @@
 				</tbody>
 			</table>
 		</div>
+		<br>
 		
 		<div id="grupoC">
-			<h2>Grupo C</h2>
+			<h3>Grupo C</h3>
 			<table>
 				<thead>
 					<tr>
@@ -76,9 +78,10 @@
 				</tbody>
 			</table>
 		</div>
+		<br>
 		
 		<div id="grupoD">
-			<h2>Grupo D</h2>
+			<h3>Grupo D</h3>
 			<table>
 				<thead>
 					<tr>
@@ -104,5 +107,6 @@
 			<a href="/campeonato-paulista"><button class="btnHome">Pagina principal</button></a>
 		</div>
 	</div>
+	<br><br>
 </body>
 </html>

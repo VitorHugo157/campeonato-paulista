@@ -349,7 +349,7 @@ BEGIN
 				SET @timeA = (SELECT CodigoTime FROM v_gruposComLinhasEnum WHERE numLinhaTime = @codigoTime)
 				SET @timeB = (SELECT CodigoTime FROM v_gruposComLinhasEnum WHERE numLinhaTime = @codigoTimeAdversario)
 
-				INSERT INTO @jogo VALUES (@timeA, @timeB, 0, 0, @data)
+				INSERT INTO @jogo VALUES (@timeA, @timeB, NULL, NULL, @data)
 
 				SET @codigoTime = @codigoTime + 1
 				SET @cont2 = @cont2 + 1

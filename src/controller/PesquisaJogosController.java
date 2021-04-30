@@ -23,11 +23,38 @@ public class PesquisaJogosController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		List<Jogo> jogos = new ArrayList<>();
-		String dataJogo = request.getParameter("data");
+		String dataJogo = "";
+		String action = request.getParameter("action");
+		String nomeTimeA = "";
+		String nomeTimeB = "";
+		int golsTimeA = 0;
+		int golsTimeB = 0;
+		
+		
+		if("atualizar".equalsIgnoreCase(action)) {
+			dataJogo = request.getParameter("dataJogo");
+			nomeTimeA = request.getParameter("nomeTimeA");
+			nomeTimeB = request.getParameter("nomeTimeB");
+			golsTimeA = Integer.parseInt(request.getParameter("golsTimeA"));
+			golsTimeB = Integer.parseInt(request.getParameter("golsTimeB"));
+			
+			System.out.println("NomeTimeA -> " + nomeTimeA);
+			System.out.println("NomeTimeB -> " + nomeTimeB);
+			System.out.println("GolsTimeA -> " + golsTimeA);
+			System.out.println("GolsTimeB -> " + golsTimeB);
+			
+		} else {
+			dataJogo = request.getParameter("data");
+		}
 		
 		try {
 			PesquisaJogosDao pjDao = new PesquisaJogosDao();
-			jogos = pjDao.findJogosByData(dataJogo);
+			if("atualizar".equalsIgnoreCase(action)) {
+				jogos = pjDao.updateJogos(nomeTimeA, nomeTimeB, golsTimeA, golsTimeB, dataJogo);
+			} else {
+				jogos = pjDao.findJogosByData(dataJogo);
+			}
+			System.out.println("dataJogo -> " + dataJogo);
 		} catch (ClassNotFoundException | SQLException e) {
 			System.out.println(e.getMessage());
 		} finally {

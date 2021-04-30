@@ -1,5 +1,6 @@
 package persistence;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -39,5 +40,20 @@ public class PesquisaJogosDao {
 		
 		ps.close();
 		return jogos;		
+	}
+	
+	public List<Jogo> updateJogos(String nomeTimeA, String nomeTimeB, int golsTimeA, int golsTimeB, String dataJogo) throws SQLException {
+		
+		String sql = "{CALL sp_atualizaJogos(?, ?, ?, ?, ?)}";
+		CallableStatement cs = c.prepareCall(sql);
+		cs.setString(1, nomeTimeA);
+		cs.setString(2, nomeTimeB);
+		cs.setInt(3, golsTimeA);
+		cs.setInt(4, golsTimeB);
+		cs.setString(5, dataJogo);
+		cs.execute();
+		cs.close();
+		
+		return findJogosByData(dataJogo);
 	}
 }

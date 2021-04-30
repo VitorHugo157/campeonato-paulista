@@ -15,6 +15,7 @@
 
 body {
   padding: 10px;
+  background-color: #000000;
 }
 .page-logo {
   width: 220px;
@@ -57,7 +58,7 @@ table {
 h1,
 h2,
 h3 {
-  color: rgb(87, 87, 87);
+  color: #D3D3D3;
   padding-bottom: 10px;
   margin-top: 20px;
 }
@@ -70,7 +71,7 @@ thead tr th:last-child {
 }
 th {
   color: white;
-  background-color: #1E90FF;
+  background-color: #696969;
   padding: 10px 25px 10px 25px;
   font-weight: 400;
   letter-spacing: 1px;
@@ -79,7 +80,7 @@ tr,
 td {
   color: rgb(87, 87, 87);
   font-weight: 500;
-  padding: 10px;
+  padding: 4px;
 }
 
 .tdAcoes {
@@ -107,14 +108,18 @@ button:hover {
 }
 
 input {
-  /*border: 2px solid #6C63FF;*/
   border: none;
   height: 35px;
   width: 20%;
   border-radius: 5px;
-  padding: 8px;
+  padding: 1px;
   margin-top: 5px;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  font-size: 15px;
   background-color: #f0f0f0;
+  color: rgb(87, 87, 87);
+  font-weight: 500;
 }
 input:focus {
   box-shadow: 1px 1px 20px #c9c9c9;
@@ -131,24 +136,41 @@ input:focus {
   margin-right: 5px;
 }
 
-.btnGerarGrupos, .btnMostrarGrupos, .btnGerarJogos {
+.btnGerarGrupos, .btnMostrarGrupos, .btnGerarJogos, .btnPesquisarJogos, .btnClassificacaoGeral, .btnClassificacaoGrupo, .btnQuartas {
   width: 10%;
-  background-color: #D2B48C;
-  color: white;
-  padding: 10px;
-  margin-top: 5px;
-}
-
-.btnPesquisarJogos {
-  width: 10%;
-  background-color: #D2B48C;
+  background-color: #696969;
   color: white;
   padding: 10px;
   margin-top: 5px;
 }
 
 .divGerarJogos, .divPesquisaJogos {
-	margin-top: 100px;
+	margin-top: 50px;
+}
+
+.rebaixamento {
+	color: #EE0000;
+	text-align: right;
+	font-size: 25px;
+	font-weight: 999;
+}
+
+.classificado {
+	color: #228B22;
+	text-align: right;
+	font-size: 25px;
+	font-weight: 999;
+}
+
+.normal {
+	color: #FFFAFA;
+	text-align: right;
+	font-size: 25px;
+	font-weight: 999;
+}
+
+.posicao {
+	text-align: left;
 }
 
 @media (max-width:479px) { /* smartphones, Android phones, landscape iPhone */ 
